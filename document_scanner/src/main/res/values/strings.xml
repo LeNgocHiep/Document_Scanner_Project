@@ -1,0 +1,14 @@
+<resources>
+    <string name="image_with_cropper">Original Image With Cropper</string>
+    <string name="app_name">Document Scanner Demo</string>
+    <string name="scanned_image">Scanned Image</string>
+    <string name="review">Xem trước</string>
+    <string name="done">Xong</string>
+    <string name="crop_rotate">Cắt và xoay</string>
+    <string name="delete">Xóa</string>
+    <string name="view">xem</string>
+    <string name="page_title">Page Title</string>
+    <string name="image_cropped">Image Cropped</string>
+    <string name="add">Thêm</string>
+    <string name="cut">Cắt</string>
+</resources>
