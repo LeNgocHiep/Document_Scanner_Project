@@ -35,22 +35,6 @@ android {
         viewBinding true
     }
 }
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            // Đặt thông tin cho artifact
-            groupId = 'com.df'  // Thay bằng ID của bạn
-            artifactId = 'document-scanner'  // Tên thư viện
-            version = '0.0.1'  // Phiên bản của thư viện
-
-            from components.release  // Dùng `components.release` cho dự án Android, `components.java` cho dự án Java thông thường
-        }
-    }
-
-    repositories {
-        mavenLocal() // Để xuất bản vào Maven local
-    }
-}
 
 
 dependencies {
