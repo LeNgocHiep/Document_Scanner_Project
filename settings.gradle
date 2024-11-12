@@ -16,9 +16,11 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven { url 'https://jitpack.io' }
     }
 }
 
 rootProject.name = "Document_Scanner_Project"
 include ':app'
 include ':document_scanner'
+include ':document_scanner_example'

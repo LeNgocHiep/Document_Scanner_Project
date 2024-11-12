@@ -1,0 +1,13 @@
+<resources>
+    <style name="TransparentActivityTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+    <style name="RoundedCornerImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">10dp</item> <!-- Adjust corner size as needed -->
+    </style>
+</resources>

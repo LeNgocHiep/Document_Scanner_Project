@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <application>
-        <activity android:name=".DocScannerMain"
+        <activity android:name=".DocumentScannerGalleryActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar"
             android:exported="true">
             <intent-filter>
