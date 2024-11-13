@@ -46,6 +46,7 @@ dependencies {
     testImplementation libs.junit
     androidTestImplementation libs.androidx.junit
     androidTestImplementation libs.androidx.espresso.core
-    implementation project(":document_scanner")
+//    implementation project(":document_scanner")
 //    implementation 'com.github.LeNgocHiep:Document_Scanner_Project:1'
+//    implementation libs.x.x.x
 }

@@ -1,6 +1,6 @@
 plugins {
     id 'com.android.library'
-    id 'org.jetbrains.kotlin.android'
+    id("org.jetbrains.kotlin.android")
     id 'maven-publish' // Thêm plugin maven-publish
 }
 
@@ -36,7 +36,6 @@ android {
     }
 }
 
-
 dependencies {
 
 //    implementation libs.androidx.core.ktx
@@ -64,4 +63,17 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     implementation 'com.google.android.gms:play-services-mlkit-document-scanner:16.0.0-beta1'
+}
+publishing {
+    publications {
+        release(MavenPublication) {
+            groupId = 'com.github.LeNgocHiep'
+            artifactId = 'Document_Scanner_Project'
+            version = '1.0.0'
+
+            afterEvaluate {
+                from components.release
+            }
+        }
+    }
 }
