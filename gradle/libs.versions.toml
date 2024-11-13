@@ -1,5 +1,9 @@
 [versions]
+activityKtx = "1.9.2"
 agp = "8.6.1"
+document_scanner_project = "1.0.8"
+fragment = "1.5.5"
+glide = "4.15.1"
 kotlin = "1.9.0"
 coreKtx = "1.10.0"
 junit = "4.13.2"
@@ -10,9 +14,21 @@ material = "1.12.0"
 constraintlayout = "2.2.0"
 navigationFragmentKtx = "2.8.3"
 navigationUiKtx = "2.8.3"
+opencv = "4.1.0"
+playServicesMlkitDocumentScanner = "16.0.0-beta1"
+recyclerview = "1.2.1"
+viewpager2 = "1.0.0"
 
 [libraries]
+
+androidx-activity-ktx = { module = "androidx.activity:activity-ktx", version.ref = "activityKtx" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-fragment = { module = "androidx.fragment:fragment", version.ref = "fragment" }
+androidx-recyclerview = { module = "androidx.recyclerview:recyclerview", version.ref = "recyclerview" }
+androidx-viewpager2 = { module = "androidx.viewpager2:viewpager2", version.ref = "viewpager2" }
+compiler = { module = "com.github.bumptech.glide:compiler", version.ref = "glide" }
+document_scanner_project = { module = "com.github.LeNgocHiep:Document_Scanner_Project", version.ref = "document_scanner_project" }
+glide = { module = "com.github.bumptech.glide:glide", version.ref = "glide" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -21,6 +37,8 @@ material = { group = "com.google.android.material", name = "material", version.r
 androidx-constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
 androidx-navigation-fragment-ktx = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 androidx-navigation-ui-ktx = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "navigationUiKtx" }
+opencv = { module = "com.websitebeaver:opencv", version.ref = "opencv" }
+play-services-mlkit-document-scanner = { module = "com.google.android.gms:play-services-mlkit-document-scanner", version.ref = "playServicesMlkitDocumentScanner" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
