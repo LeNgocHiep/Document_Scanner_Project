@@ -85,8 +85,8 @@ afterEvaluate {
             release(MavenPublication) {
                 from components.release
                 groupId = 'com.github.LeNgocHiep'
-                artifactId = 'document_scanner'
-                version = '1.0.0'
+                artifactId = 'Document_Scanner_Project'
+                version = '1.0.5'
             }
         }
     }
