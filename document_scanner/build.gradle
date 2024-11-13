@@ -47,7 +47,6 @@ dependencies {
 //    testImplementation libs.junit
 //    androidTestImplementation libs.androidx.junit
 //    androidTestImplementation libs.androidx.espresso.core
-
     implementation 'androidx.core:core-ktx:1.10.1'
     implementation "androidx.fragment:fragment:1.5.5"
     implementation 'androidx.appcompat:appcompat:1.6.0'
@@ -86,7 +85,7 @@ afterEvaluate {
                 from components.release
                 groupId = 'com.github.LeNgocHiep'
                 artifactId = 'Document_Scanner_Project'
-                version = '1.0.5'
+                version = '1.0.6'
             }
         }
     }
