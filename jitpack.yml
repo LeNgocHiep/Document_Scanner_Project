@@ -1,2 +1,5 @@
 jdk:
-  - openjdk11
+  - openjdk17 // Your JDK version
+before_install:
+  - sdk install java 17.0.7-open // Your JDK version
+  - sdk use java 17.0.7-open // Your JDK version
