@@ -16,8 +16,7 @@ class DocumentScanner {
     private val REQUEST_IMAGE_PICK = 1809
     fun startDocumentScanner(
         activity: Activity,
-        maxItems: Int,
-        callback: (Result<Map<String, Any?>>) -> Unit
+        maxItems: Int
     ) {
         val options = mapOf(
             "isGalleryImport" to false,
@@ -46,12 +45,9 @@ class DocumentScanner {
                         0,
                         0
                     )
-                } catch (e: IntentSender.SendIntentException) {
-                    callback(Result.failure(Exception("Failed to start document scanner")))
+                } catch (_: IntentSender.SendIntentException) {
                 }
-            }).addOnFailureListener(OnFailureListener {
-                callback(Result.failure(Exception("Failed to start document scanner")))
-            })
+            }).addOnFailureListener(OnFailureListener {})
     }
 
     private fun parseOptions(options: Map<String, Any>): GmsDocumentScannerOptions {
@@ -97,7 +93,7 @@ class DocumentScanner {
             REQUEST_IMAGE_PICK -> {
                 if (resultCode == Activity.RESULT_OK) {
                     val resultData = data?.getStringExtra("path")
-                    mapOf("galleryPath" to resultData)
+                    mapOf("pdf" to resultData)
                 } else {
                     null
                 }
@@ -111,13 +107,7 @@ class DocumentScanner {
         val resultMap = mutableMapOf<String, Any?>()
 
         val pdf = result.pdf
-        resultMap["pdf"] = pdf?.let {
-            mapOf("pageCount" to it.pageCount, "uri" to it.uri.path)
-        }
-
-        val pages = result.pages
-        resultMap["images"] = pages?.map { it.imageUri.path }
-
+        resultMap["pdf"] = pdf?.uri?.path
         return resultMap
     }
 
